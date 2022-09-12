@@ -1,0 +1,7 @@
+---
+export interface Props extends astroHTML.JSX.AnchorHTMLAttributes {}
+
+const props = Astro.props as Props;
+---
+
+<a {...props} rel="prefetch"><slot /></a>
