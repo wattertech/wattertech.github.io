@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: ["src/**/*.astro"],
+	content: ["src/**/*.{astro,tsx}"],
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: "Roboto",
+				sans: "PT Sans",
 				serif: "Noto Serif"
 			}
 		}

@@ -1,7 +1,16 @@
 ---
+import Particles from "../components/Particles.astro";
+import TypistLoop from "../components/TypistLoop";
 import Base from "../layouts/Base.astro";
 ---
 
 <Base>
-	<h2>Hello, world!</h2>
+	<Particles />
+	<div class="h-screen flex flex-col justify-center">
+		<h2 class="text-center text-6xl select-none">Neal Wang</h2>
+		<TypistLoop
+			client:load
+			texts={["Student", "Mathlete", "Violinist", "Programmer", "Arch User"]}
+		/>
+	</div>
 </Base>
