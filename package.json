@@ -11,7 +11,7 @@
     "@astrojs/tailwind": "^1.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-typist": "^2.0.5"
+    "react-typist-component": "^1.0.4"
   },
   "devDependencies": {
     "@astrojs/image": "^0.7.0",
@@ -19,7 +19,6 @@
     "@astrojs/sitemap": "^1.0.0",
     "@catppuccin/tailwindcss": "^0.1.0",
     "@types/react": "^18.0.20",
-    "@types/react-typist": "^2.0.3",
     "@typescript-eslint/parser": "^5.36.2",
     "astro": "^1.2.1",
     "eslint": "^8.23.0",
