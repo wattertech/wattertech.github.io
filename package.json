@@ -1,34 +1,37 @@
 {
-  "private": true,
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/prefetch": "^0.0.7",
-    "@astrojs/tailwind": "^1.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-typist-component": "^1.0.4"
-  },
-  "devDependencies": {
-    "@astrojs/image": "^0.7.0",
-    "@astrojs/react": "^1.1.3",
-    "@astrojs/sitemap": "^1.0.0",
-    "@catppuccin/tailwindcss": "^0.1.0",
-    "@types/react": "^18.0.20",
-    "@typescript-eslint/parser": "^5.36.2",
-    "astro": "^1.2.1",
-    "eslint": "^8.23.0",
-    "eslint-plugin-astro": "^0.19.0",
-    "eslint-plugin-jsx-a11y": "^6.6.1",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-simple-import-sort": "^8.0.0",
-    "prettier": "^2.7.1",
-    "prettier-plugin-astro": "^0.5.4",
-    "tailwindcss": "^3.1.8",
-    "typescript": "^4.8.3"
-  }
+	"private": true,
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro",
+		"predeploy": "astro build",
+		"deploy": "gh-pages -d dist"
+	},
+	"dependencies": {
+		"@astrojs/prefetch": "^0.0.7",
+		"@astrojs/tailwind": "^1.0.0",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-typist-component": "^1.0.4"
+	},
+	"devDependencies": {
+		"@astrojs/image": "^0.7.0",
+		"@astrojs/react": "^1.1.3",
+		"@astrojs/sitemap": "^1.0.0",
+		"@catppuccin/tailwindcss": "^0.1.0",
+		"@types/react": "^18.0.20",
+		"@typescript-eslint/parser": "^5.36.2",
+		"astro": "^1.2.1",
+		"eslint": "^8.23.0",
+		"eslint-plugin-astro": "^0.19.0",
+		"eslint-plugin-jsx-a11y": "^6.6.1",
+		"eslint-plugin-prettier": "^4.2.1",
+		"eslint-plugin-simple-import-sort": "^8.0.0",
+		"gh-pages": "^4.0.0",
+		"prettier": "^2.7.1",
+		"prettier-plugin-astro": "^0.5.4",
+		"tailwindcss": "^3.1.8",
+		"typescript": "^4.8.3"
+	}
 }
