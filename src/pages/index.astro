@@ -1,16 +1,43 @@
 ---
-import Particles from "../components/Particles.astro";
+import Matrix from "../components/Matrix.astro";
 import TypistLoop from "../components/TypistLoop";
 import Base from "../layouts/Base.astro";
 ---
 
 <Base>
-	<Particles />
+	<Matrix />
 	<div class="h-screen flex flex-col justify-center">
 		<h2 class="text-center text-6xl select-none">Neal Wang</h2>
 		<TypistLoop
 			client:load
 			texts={["Student", "Mathlete", "Violinist", "Programmer", "Arch User"]}
 		/>
+		<div class="flex">
+			<a class="m-auto fill-surface0" href="/about">
+				<svg id="about" width={30} height={20}>
+					<polygon points="0,0 30,0 15,20"></polygon>
+				</svg>
+			</a>
+		</div>
 	</div>
 </Base>
+
+<style>
+	#about {
+		transition: transform 0.5s cubic-bezier(0, 0, 0.5, 1);
+		animation: blink 3s linear infinite;
+		animation-delay: 0.5s;
+	}
+
+	#about:hover {
+		transform: scale(1.2);
+		cursor: pointer;
+		animation: none;
+	}
+
+	@keyframes blink {
+		50% {
+			opacity: 0;
+		}
+	}
+</style>
