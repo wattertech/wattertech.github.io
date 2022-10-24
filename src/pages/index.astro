@@ -7,29 +7,34 @@ import Base from "../layouts/Base.astro";
 <Base>
 	<Matrix />
 	<div class="h-screen flex flex-col justify-center">
-		<h2 class="text-center text-6xl select-none">Neal Wang</h2>
+		<h1 class="text-center text-6xl select-none">Neal Wang</h1>
 		<TypistLoop
 			client:load
 			texts={["Student", "Mathlete", "Violinist", "Programmer", "Arch User"]}
 		/>
 		<div class="flex">
-			<a class="m-auto fill-surface0" href="/about">
-				<svg id="about" width={30} height={20}>
+			<button class="m-auto fill-surface0">
+				<svg id="continue" width={30} height={20}>
 					<polygon points="0,0 30,0 15,20"></polygon>
 				</svg>
-			</a>
+			</button>
 		</div>
 	</div>
+	<div class="h-screen" id="about">Hello</div>
 </Base>
 
+<script>
+	import "../lib/scroll.ts";
+</script>
+
 <style>
-	#about {
+	#continue {
 		transition: transform 0.5s cubic-bezier(0, 0, 0.5, 1);
 		animation: blink 3s linear infinite;
 		animation-delay: 0.5s;
 	}
 
-	#about:hover {
+	#continue:hover {
 		transform: scale(1.2);
 		cursor: pointer;
 		animation: none;

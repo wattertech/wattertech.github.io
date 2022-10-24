@@ -12,4 +12,8 @@
 	a {
 		@apply text-blue;
 	}
+
+	::-webkit-scrollbar {
+		@apply hidden;
+	}
 }

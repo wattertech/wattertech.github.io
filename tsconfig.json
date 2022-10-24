@@ -1,6 +1,5 @@
 {
 	"compilerOptions": {
-		"isolatedModules": true,
 		"module": "esnext",
 		"moduleResolution": "node",
 		"noEmit": true,
