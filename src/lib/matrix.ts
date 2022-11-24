@@ -4,6 +4,8 @@ const CHAR_HEIGHT = 24;
 const CHAR_WIDTH = 18;
 const DELAY = 50;
 const GLITCH_RATE = 0.2;
+const FADE = 0.9;
+const GOLD = 0.5;
 
 const canvas = document.querySelector("canvas")!;
 const ctx = canvas.getContext("2d")!;
@@ -11,16 +13,18 @@ const ctx = canvas.getContext("2d")!;
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-let SPAWN_RATE = 0.6 / (1920 / canvas.width);
+let SPAWN_RATE = canvas.width / 1920;
 
 window.onresize = () => {
 	canvas.width = window.innerWidth;
 	canvas.height = window.innerHeight;
 
-	SPAWN_RATE = 0.5 / (1920 / canvas.width);
+	SPAWN_RATE = canvas.width / 2500;
 };
 
 let frame = 0;
+
+let mouse = { x: -1000, y: -1000, acc: 0 };
 
 class Stream {
 	private chars: string[] = [];
@@ -54,7 +58,16 @@ class Stream {
 			if (this.glitches.includes(i) && this.chars[i] !== " ")
 				this.chars[i] = CHARSET[Math.floor(Math.random() * CHARSET.length)];
 
-			ctx.fillStyle = i === this.chars.length - 1 ? "#6c7086" : "#313244";
+			let x = this.x + CHAR_WIDTH / 2;
+			let y = i * CHAR_HEIGHT + CHAR_HEIGHT / 2;
+
+			ctx.fillStyle =
+				(x - mouse.x) * (x - mouse.x) + (y - mouse.y) * (y - mouse.y) <
+				mouse.acc * GOLD
+					? "#fab387"
+					: i === this.chars.length - 1
+					? "#6c7086"
+					: "#313244";
 			ctx.fillText(this.chars[i], this.x, i * CHAR_HEIGHT);
 		}
 	}
@@ -68,6 +81,8 @@ const tick = () => {
 	requestAnimationFrame(tick);
 
 	if (Date.now() > lastTick + DELAY) {
+		mouse.acc *= FADE;
+
 		if (Math.random() < SPAWN_RATE)
 			streams.push(
 				new Stream(
@@ -91,3 +106,9 @@ const tick = () => {
 };
 
 requestAnimationFrame(tick);
+
+document.onmousemove = e => {
+	mouse.x = e.clientX;
+	mouse.y = e.clientY;
+	mouse.acc += e.movementX * e.movementX + e.movementY * e.movementY;
+};

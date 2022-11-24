@@ -1,5 +1,6 @@
 ---
 import Matrix from "../components/Matrix.astro";
+import NavCard from "../components/NavCard.astro";
 import TypistLoop from "../components/TypistLoop";
 import Base from "../layouts/Base.astro";
 ---
@@ -20,7 +21,16 @@ import Base from "../layouts/Base.astro";
 			</button>
 		</div>
 	</div>
-	<div class="h-screen" id="about">Hello</div>
+	<div class="h-screen flex" id="nav">
+		<div class="m-auto grid grid-cols-3 gap-32">
+			<NavCard title="About" href="/about" />
+			<NavCard title="Skills" href="/skills" />
+			<NavCard title="Work" href="/work" />
+			<NavCard title="Idk" href="/" />
+			<NavCard title="Blog" href="/blog" />
+			<NavCard title="Contact" href="/blog" />
+		</div>
+	</div>
 </Base>
 
 <script>
