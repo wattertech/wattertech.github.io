@@ -59,7 +59,7 @@ class Stream {
 				this.chars[i] = CHARSET[Math.floor(Math.random() * CHARSET.length)];
 
 			let x = this.x + CHAR_WIDTH / 2;
-			let y = i * CHAR_HEIGHT + CHAR_HEIGHT / 2;
+			let y = i * CHAR_HEIGHT - CHAR_HEIGHT / 2;
 
 			ctx.fillStyle =
 				(x - mouse.x) * (x - mouse.x) + (y - mouse.y) * (y - mouse.y) <
