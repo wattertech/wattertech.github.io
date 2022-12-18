@@ -7,6 +7,7 @@ import Base from "../layouts/Base.astro";
 
 <Base>
 	<Matrix />
+	<div class="fixed w-screen h-screen" id="vignette"></div>
 	<div class="h-screen flex flex-col justify-center">
 		<h1 class="text-center text-6xl select-none">Neal Wang</h1>
 		<TypistLoop
@@ -26,7 +27,7 @@ import Base from "../layouts/Base.astro";
 			<NavCard title="About" href="/about" />
 			<NavCard title="Skills" href="/skills" />
 			<NavCard title="Work" href="/work" />
-			<NavCard title="Idk" href="/" />
+			<NavCard title="Projects" href="/projects" />
 			<NavCard title="Blog" href="/blog" />
 			<NavCard title="Contact" href="/blog" />
 		</div>
@@ -38,6 +39,10 @@ import Base from "../layouts/Base.astro";
 </script>
 
 <style>
+	#vignette {
+		box-shadow: 0 0 200px rgba(0, 0, 0, 0.8) inset;
+	}
+
 	#continue {
 		transition: transform 0.5s cubic-bezier(0, 0, 0.5, 1);
 		animation: blink 3s linear infinite;

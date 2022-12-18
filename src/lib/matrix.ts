@@ -4,6 +4,7 @@ const CHAR_HEIGHT = 24;
 const CHAR_WIDTH = 18;
 const DELAY = 50;
 const GLITCH_RATE = 0.2;
+const ERROR_RATE = 0.05;
 const FADE = 0.9;
 const GOLD = 0.5;
 
@@ -32,6 +33,7 @@ class Stream {
 	private speed: number;
 	private x: number;
 	private glitches: number[] = [];
+	private error: boolean;
 
 	public constructor(x: number) {
 		this.length = Math.floor(Math.random() * 40) + 4;
@@ -40,6 +42,8 @@ class Stream {
 
 		for (let i = 0; i < canvas.height / CHAR_HEIGHT; i++)
 			if (Math.random() < GLITCH_RATE) this.glitches.push(i);
+
+		this.error = Math.random() < 0.05;
 	}
 
 	public update() {
@@ -52,7 +56,7 @@ class Stream {
 		if (this.chars.length - this.length > canvas.height / CHAR_HEIGHT)
 			return true;
 
-		ctx.font = `${CHAR_HEIGHT}px PT Sans`;
+		ctx.font = `${CHAR_HEIGHT}px Kosugi Maru`;
 
 		for (let i = 0; i < this.chars.length; i++) {
 			if (this.glitches.includes(i) && this.chars[i] !== " ")
@@ -65,6 +69,10 @@ class Stream {
 				(x - mouse.x) * (x - mouse.x) + (y - mouse.y) * (y - mouse.y) <
 				mouse.acc * GOLD
 					? "#fab387"
+					: this.error
+					? i === this.chars.length - 1
+						? "#f38ba8"
+						: "#eba0ac"
 					: i === this.chars.length - 1
 					? "#6c7086"
 					: "#313244";
