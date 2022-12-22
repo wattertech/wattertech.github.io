@@ -16,4 +16,8 @@
 	::-webkit-scrollbar {
 		@apply hidden;
 	}
+
+	.neon {
+		text-shadow: 0 0 4px currentColor;
+	}
 }

@@ -1,4 +1,4 @@
-import { FC } from "react";
+import React, { FC } from "react";
 import Typist from "react-typist-component";
 
 export interface Props {
@@ -11,7 +11,7 @@ const TypistLoop: FC<Props> = ({ texts }) => (
 			{texts.map(text => (
 				<div key={text}>
 					<Typist.Delay ms={1000} />
-					<div className="text-center text-4xl text-sapphire select-none">
+					<div className="text-center text-4xl text-sapphire select-none neon">
 						{text}
 					</div>
 					<Typist.Delay ms={1500} />
