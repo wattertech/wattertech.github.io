@@ -2,62 +2,26 @@
 import Matrix from "../components/Matrix.astro";
 import NavCard from "../components/NavCard.astro";
 import TypistLoop from "../components/TypistLoop";
+import Vignette from "../components/Vignette.astro";
 import Base from "../layouts/Base.astro";
 ---
 
 <Base>
 	<Matrix />
-	<div class="fixed w-screen h-screen" id="vignette"></div>
+	<Vignette />
 	<div class="h-screen flex flex-col justify-center">
 		<h1 class="text-center text-6xl shadow-text select-none neon">Neal Wang</h1>
 		<TypistLoop
 			client:load
 			texts={["Student", "Mathlete", "Violinist", "Programmer", "Arch User"]}
 		/>
-		<div class="flex">
-			<button class="m-auto fill-surface0">
-				<svg id="continue" width={30} height={20}>
-					<polygon points="0,0 30,0 15,20"></polygon>
-				</svg>
-			</button>
-		</div>
 	</div>
-	<div class="h-screen flex" id="nav">
-		<div class="m-auto grid grid-cols-3 gap-32">
-			<NavCard title="About" href="/about" />
-			<NavCard title="Skills" href="/skills" />
-			<NavCard title="Work" href="/work" />
-			<NavCard title="Projects" href="/projects" />
-			<NavCard title="Blog" href="/blog" />
-			<NavCard title="Contact" href="/contact" />
-		</div>
+	<div class="absolute left-16 bottom-0 h-screen flex flex-col justify-evenly">
+		<NavCard title="About" href="/about" color="#f38ba8" />
+		<NavCard title="Skills" href="/skills" color="#fab387" />
+		<NavCard title="Work" href="/work" color="#f9e2af" />
+		<NavCard title="Projects" href="/projects" color="#a6e3a1" />
+		<NavCard title="Blog" href="/blog" color="#89b4fa" />
+		<NavCard title="Contact" href="/contact" color="#b4befe" />
 	</div>
 </Base>
-
-<script>
-	import "../lib/scroll.ts";
-</script>
-
-<style>
-	#vignette {
-		box-shadow: 0 0 200px rgba(0, 0, 0, 0.8) inset;
-	}
-
-	#continue {
-		transition: transform 0.5s cubic-bezier(0, 0, 0.5, 1);
-		animation: blink 3s linear infinite;
-		animation-delay: 0.5s;
-	}
-
-	#continue:hover {
-		transform: scale(1.2);
-		cursor: pointer;
-		animation: none;
-	}
-
-	@keyframes blink {
-		50% {
-			opacity: 0;
-		}
-	}
-</style>
