@@ -8,7 +8,7 @@ import Base from "../layouts/Base.astro";
 	<Vignette />
 	<div class="h-screen flex flex-col justify-evenly">
 		<h1 class="mx-auto text-center text-6xl select-none neon">Contact</h1>
-		<div class="mx-auto mb-16 grid grid-cols-3 gap-32">
+		<div class="mx-auto mb-16 grid grid-cols-3 gap-32" id="fade">
 			<ContactCard
 				icon="github"
 				title="GitHub"
@@ -48,3 +48,7 @@ import Base from "../layouts/Base.astro";
 		</div>
 	</div>
 </Base>
+
+<script>
+	import "../lib/fade";
+</script>

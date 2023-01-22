@@ -13,10 +13,22 @@ import Base from "../layouts/Base.astro";
 		<h1 class="text-center text-6xl shadow-text select-none neon">Neal Wang</h1>
 		<TypistLoop
 			client:load
-			texts={["Student", "Mathlete", "Violinist", "Programmer", "Arch User"]}
+			texts={[
+				"Student",
+				"Mathlete",
+				"Developer",
+				"Scientist",
+				"Teacher",
+				"Violinist",
+				"Tennis Player",
+				"NixOS User"
+			]}
 		/>
 	</div>
-	<div class="absolute left-16 bottom-0 h-screen flex flex-col justify-evenly">
+	<div
+		class="absolute left-16 bottom-0 h-screen flex flex-col justify-evenly"
+		id="fade"
+	>
 		<NavCard title="About" href="/about" color="#f38ba8" />
 		<NavCard title="Skills" href="/skills" color="#fab387" />
 		<NavCard title="Work" href="/work" color="#f9e2af" />
@@ -25,3 +37,7 @@ import Base from "../layouts/Base.astro";
 		<NavCard title="Contact" href="/contact" color="#b4befe" />
 	</div>
 </Base>
+
+<script>
+	import "../lib/fade";
+</script>

@@ -43,7 +43,7 @@ class Stream {
 		for (let i = 0; i < canvas.height / CHAR_HEIGHT; i++)
 			if (Math.random() < GLITCH_RATE) this.glitches.push(i);
 
-		this.error = Math.random() < 0.05;
+		this.error = Math.random() < ERROR_RATE;
 	}
 
 	public update() {
