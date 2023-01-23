@@ -1,0 +1,26 @@
+---
+import PageNav from "../components/PageNav.astro";
+import Vignette from "../components/Vignette.astro";
+
+export interface Props {
+	title: string;
+	prev?: string;
+	next?: string;
+}
+
+const { title, prev, next } = Astro.props as Props;
+---
+
+<>
+	<Vignette />
+	<div class="h-screen flex flex-col justify-evenly">
+		<a href="/">
+			<h1 class="mx-auto text-center text-6xl select-none animate-bounce neon">
+				{title}
+			</h1>
+		</a>
+		{prev && <PageNav href={prev} back />}
+		{next && <PageNav href={next} />}
+		<slot />
+	</div>
+</>

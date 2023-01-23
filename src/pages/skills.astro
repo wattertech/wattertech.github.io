@@ -1,14 +1,12 @@
 ---
 import SkillsNav from "../components/SkillsNav.astro";
-import Vignette from "../components/Vignette.astro";
 import Base from "../layouts/Base.astro";
+import Content from "../layouts/Content.astro";
 ---
 
 <Base title="Skills">
-	<Vignette />
-	<div class="h-screen flex flex-col justify-evenly">
-		<h1 class="mx-auto text-center text-6xl select-none neon">Skills</h1>
-		<div class="mx-auto">
+	<Content title="Skills" prev="/about" next="/work">
+		<div class="mx-auto -my-16">
 			<canvas width="500px" height="500px" id="skills"></canvas>
 		</div>
 		<div class="mx-auto w-1/2 flex justify-evenly" id="fade">
@@ -16,7 +14,7 @@ import Base from "../layouts/Base.astro";
 			<SkillsNav title="Environment" />
 			<SkillsNav title="Web Stack" />
 		</div>
-	</div>
+	</Content>
 </Base>
 
 <script>

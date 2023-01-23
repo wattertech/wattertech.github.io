@@ -27,6 +27,12 @@ let frame = 0;
 
 let mouse = { x: -1000, y: -1000, acc: 0 };
 
+document.onmousemove = e => {
+	mouse.x = e.clientX;
+	mouse.y = e.clientY;
+	mouse.acc += e.movementX * e.movementX + e.movementY * e.movementY;
+};
+
 class Stream {
 	private chars: string[] = [];
 	private length: number;
@@ -64,6 +70,11 @@ class Stream {
 
 			let x = this.x + CHAR_WIDTH / 2;
 			let y = i * CHAR_HEIGHT - CHAR_HEIGHT / 2;
+
+			if (this.chars[i] !== " ") {
+				ctx.fillStyle = "#1e1e2e";
+				ctx.fillRect(this.x, i * CHAR_HEIGHT, CHAR_WIDTH, CHAR_HEIGHT);
+			}
 
 			ctx.fillStyle =
 				(x - mouse.x) * (x - mouse.x) + (y - mouse.y) * (y - mouse.y) <
@@ -113,10 +124,6 @@ const tick = () => {
 	}
 };
 
-requestAnimationFrame(tick);
-
-document.onmousemove = e => {
-	mouse.x = e.clientX;
-	mouse.y = e.clientY;
-	mouse.acc += e.movementX * e.movementX + e.movementY * e.movementY;
-};
+setTimeout(() => {
+	requestAnimationFrame(tick);
+}, 1500);
