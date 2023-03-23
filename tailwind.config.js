@@ -5,7 +5,7 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				sans: "PT Sans",
-				serif: "Noto Serif"
+				serif: "EB Garamond"
 			}
 		}
 	},

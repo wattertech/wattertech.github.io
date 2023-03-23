@@ -3,23 +3,27 @@ export interface Props {
 	icon: string;
 	title: string;
 	href: string;
-	color: string;
+	colour: string;
 }
 
-const { icon, title, href, color } = Astro.props as Props;
+const { icon, title, href, colour } = Astro.props as Props;
 ---
 
-<a class="opacity-0 transition-opacity duration-1000" href={href}>
+<a
+	class="opacity-0 transition-opacity duration-1000"
+	href={href}
+	target="_blank"
+>
 	<div class="w-32 h-32" id="flip">
 		<div class="w-full h-full text-center" id="inner">
 			<div class="flex rounded-lg bg-surface0 bg-opacity-40" id="front">
 				<img
 					class="w-1/2 h-1/2 m-auto"
-					src={`https://cdn.simpleicons.org/${icon}/${color}`}
+					src={`https://cdn.simpleicons.org/${icon}/${colour}`}
 				/>
 			</div>
 			<div class="flex rounded-lg bg-surface0 bg-opacity-40" id="back">
-				<h2 class="m-auto text-2xl neon" style={{ color: `#${color}` }}>
+				<h2 class="m-auto text-2xl neon" style={{ color: `#${colour}` }}>
 					{title}
 				</h2>
 			</div>
