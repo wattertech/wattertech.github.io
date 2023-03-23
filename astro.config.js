@@ -6,6 +6,7 @@ import tailwind from "@astrojs/tailwind";
 import { defineConfig } from "astro/config";
 
 export default defineConfig({
+	site: "https://mathletedev.github.io",
 	integrations: [
 		react(),
 		tailwind({
