@@ -1,0 +1,32 @@
+---
+import Base from "../layouts/Base.astro";
+import Content from "../layouts/Content.astro";
+---
+
+<Base title="Problem">
+	<Content title="Problem" next="/skills">
+		<div
+			class="mx-auto -mt-16 w-1/2 text-xl text-justify font-['Patrick_Hand'] leading-10"
+		>
+			<p>
+Regions worldwide continually suffer from water-related crises, which is aggravated by water wastage. The average American household uses approximately 80-100 gallons of water a day, and 95% of that is completely wasted. This can result in a multitude of issues, such as rising water prices, economic crises, natural disasters, decrease in vegetation, and much more. In one study, it is estimated that Americans now have to spend over $1000 on water bills. The Palouse region is among the areas impacted. Pullman has depleted its source of Artesian Wells, now forced to rely on other sources like aquifers. Our product, the WatterBolt mainly helps the user reduce continually rising water bills and improve the environment in the Palouse area.
+			</p>
+		</div>
+	</Content>
+</Base>
+
+<style>
+	.animate-blink {
+		animation: blink 2s linear infinite;
+	}
+
+	@keyframes blink {
+		0% {
+			opacity: 1;
+		}
+
+		50% {
+			opacity: 0;
+		}
+	}
+</style>

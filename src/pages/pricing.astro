@@ -3,25 +3,17 @@ import Base from "../layouts/Base.astro";
 import Content from "../layouts/Content.astro";
 ---
 
-<Base title="About">
-	<Content title="About" next="/skills">
+<Base title="Pricing">
+	<Content title="Pricing" next="/skills">
 		<div
 			class="mx-auto -mt-16 w-1/2 text-xl text-justify font-['Patrick_Hand'] leading-10"
 		>
 			<p>
-				<span id="scroll"></span><span class="animate-blink">▌</span><span
-					id="tip"
-					class="italic text-surface2 animate-pulse"
-					>Scroll to learn more...</span
-				>
+Our product, the WatterBolt, will be sold for just $9.99. This will ensure our financial prosperity while keeping prices low. We estimate that we will be able to break-even in just 18 months if current trends continue.
 			</p>
 		</div>
 	</Content>
 </Base>
-
-<script>
-	import "../lib/scroll";
-</script>
 
 <style>
 	.animate-blink {

@@ -1,0 +1,36 @@
+---
+import TeamCard from "../components/TeamCard.astro";
+import Base from "../layouts/Base.astro";
+import Content from "../layouts/Content.astro";
+---
+
+<Base title="Team">
+	<Content title="Team" prev="/blog">
+		<div class="mx-auto mb-16 grid grid-cols-2 gap-32" id="fade">
+			<TeamCard
+				title="Neal Wang"
+				description="Engineering"
+				content="Neal oversees the design and development of our product. He updates our product so that it can be made more efficiently and also be easier for potential customers to use."
+			/>
+			<TeamCard
+				title="Charles Liu"
+				description="Marketing"
+				content="Charles is in charge of WatterTech’s marketing campaign and status similar companies to give WatterTech a competitive advantage over its competitors. He is in charge of increasing outreach and helping WatterTech get more customers."
+			/>
+			<TeamCard
+				title="Mir Park"
+				description="Operations"
+				content="Mir ensures quality assurance for WatterTech Product and is in charge of keeping everyone on track and up to date so that WatterTech can operate as smoothly and efficiently as possible."
+			/>
+			<TeamCard
+				title="Aditya Parikh"
+				description="Finances"
+				content="Aditya is in charge of pricing of products and services and ensuring that WatterTech makes a profit and can return to its investors. He performs data analysis and helps the team make informed financial decisions as a whole."
+			/>
+		</div>
+	</Content>
+</Base>
+
+<script>
+	import "../lib/fade";
+</script>

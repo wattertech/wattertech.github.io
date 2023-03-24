@@ -10,18 +10,15 @@ import Base from "../layouts/Base.astro";
 	<Matrix />
 	<Vignette />
 	<div class="h-screen flex flex-col justify-center">
-		<h1 class="text-center text-6xl shadow-text select-none neon">Neal Wang</h1>
+		<h1 class="text-center text-6xl shadow-text select-none neon">WatterTech</h1>
 		<TypistLoop
 			client:load
 			texts={[
-				"Student",
-				"Mathlete",
-				"Developer",
-				"Scientist",
-				"Teacher",
-				"Violinist",
-				"Tennis Player",
-				"NixOS User"
+				"Tech Startup",
+				"Water Conservation",
+				"Data Analysis",
+				"Artificial Intelligence",
+				"Saving the Environment",
 			]}
 		/>
 	</div>
@@ -29,12 +26,11 @@ import Base from "../layouts/Base.astro";
 		class="absolute left-16 bottom-0 h-screen flex flex-col justify-evenly"
 		id="fade"
 	>
-		<NavCard title="About" href="/about" colour="#f38ba8" />
-		<NavCard title="Skills" href="/skills" colour="#fab387" />
-		<NavCard title="Awards" href="/awards" colour="#f9e2af" />
-		<NavCard title="Projects" href="/projects" colour="#a6e3a1" />
-		<NavCard title="Blog" href="/blog" colour="#89b4fa" />
-		<NavCard title="Contact" href="/contact" colour="#b4befe" />
+		<NavCard title="Problem" href="/problem" colour="#f38ba8" />
+		<NavCard title="Product" href="/product" colour="#fab387" />
+		<NavCard title="Advantage" href="/advantage" colour="#f9e2af" />
+		<NavCard title="Pricing" href="/pricing" colour="#a6e3a1" />
+		<NavCard title="Team" href="/team" colour="#89b4fa" />
 	</div>
 </Base>
 

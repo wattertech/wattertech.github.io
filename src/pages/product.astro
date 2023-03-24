@@ -1,0 +1,32 @@
+---
+import Base from "../layouts/Base.astro";
+import Content from "../layouts/Content.astro";
+---
+
+<Base title="Product">
+	<Content title="Product" next="/skills">
+		<div
+			class="mx-auto -mt-16 w-1/2 text-xl text-justify font-['Patrick_Hand'] leading-10"
+		>
+			<p>
+WatterTech’s product, the WatterBolt is a 3D-printed attachment that allows the user to manually contract or expand the size of the hole that allows water through. This can be done through a knob on the side of the product, which can be easily twisted. The contraction controls water flow, pushing back additional water, allowing customers to save water and reduce their water bills.
+			</p>
+		</div>
+	</Content>
+</Base>
+
+<style>
+	.animate-blink {
+		animation: blink 2s linear infinite;
+	}
+
+	@keyframes blink {
+		0% {
+			opacity: 1;
+		}
+
+		50% {
+			opacity: 0;
+		}
+	}
+</style>

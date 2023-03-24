@@ -2,18 +2,9 @@ const content = document.getElementById("scroll")!;
 const tip = document.getElementById("tip")!;
 
 const TEXT = `
-Neal Wang is a high schooler with over 6 years of coding experience.
-He made this portfolio site using Astro, TypeScript, and TailwindCSS.
-As someone who learns a lot, he loves to teach and inspire others.
-Neal runs an educational programming YouTube channel, MathleteDev, with over 300 subscribers.
-He is part of his school's IT team and loves to help teachers with technology issues.
-In his free time, Neal enjoys athletics such as playing tennis and swimming.
-He is part of Pullman High School's Math Team, Science Olympiad, Computer Science Club, and 4061 Robotics team.
-He is a great violin player and artist.
-Not quite so great at chess, but he likes to play it.
-Furthermore, Neal is an avid Linux (NixOS) user and advocate for open source software.
-Most of his projects are uploaded to GitHub under the GPL open source license.
-Neal hopes to use these skills to make the world a better place!
+WatterTech is a tech startup founded by Charles Liu, Aditya Parikh, Mir Park, and Neal Wang.
+The company was started after realising that over 95% of water used in households is wasted.
+Clearly,
 `;
 
 let index = 0;

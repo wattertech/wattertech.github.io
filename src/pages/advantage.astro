@@ -1,0 +1,32 @@
+---
+import Base from "../layouts/Base.astro";
+import Content from "../layouts/Content.astro";
+---
+
+<Base title="Advantage">
+	<Content title="Advantage" next="/skills">
+		<div
+			class="mx-auto -mt-16 w-1/2 text-xl text-justify font-['Patrick_Hand'] leading-10"
+		>
+			<p>
+The WatterBolt will be sold for $9.99, which is much cheaper than any other product on the markets that has a similar function. The device is also extremely robust and simple to use, and highly compatible with water outlets, allowing it to be an easier transition for customers. These will allow people to be more inclined to buy the WatterBolt if they are unsure which product to try or are first-time purchasers of such products, aiding in our gain of users.
+			</p>
+		</div>
+	</Content>
+</Base>
+
+<style>
+	.animate-blink {
+		animation: blink 2s linear infinite;
+	}
+
+	@keyframes blink {
+		0% {
+			opacity: 1;
+		}
+
+		50% {
+			opacity: 0;
+		}
+	}
+</style>
